@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace DelegatesAndEvents
 {
-    internal class EventProblem
+    public delegate void DelEventHandler();
+    public class EventProblem
     {
+        public static void India()
+        {
+            Console.WriteLine("India");
+        }
+        public static void USA()
+        {
+            Console.WriteLine("USA");
+        }
+        public static void England()
+        {
+            Console.WriteLine("England");
+        }
     }
 }
