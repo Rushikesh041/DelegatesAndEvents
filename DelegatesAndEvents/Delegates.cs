@@ -27,21 +27,14 @@ namespace DelegatesAndEvents
 
         public static void ImplementDelegates()
         {
-            Del[] obj =
-            {
-                new Del(Delegates.Addition),
-                new Del(Delegates.Multiplication),
-                new Del(Delegates.Substraction),
-            };
-
-            for (int i = 0; i < obj.Length; i++)
-            {
-                obj[i](10, 5);
-                obj[i](20, 10);
-                obj[i](40, 20);
-
-                Console.WriteLine();
-            }
+            Del obj = new Del(Delegates.Addition);
+            obj += Delegates.Substraction;
+            obj += Delegates.Multiplication;
+            obj(10, 5);
+            Console.WriteLine();
+            obj(20, 10);
+            Console.WriteLine();
+            obj(40, 20);
         }
     }
 }
